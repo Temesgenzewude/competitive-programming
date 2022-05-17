@@ -39,17 +39,30 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        for i in range(1, len(nums) - 1):
-            if (nums[i - 1] + nums[i + 1]) / 2 == nums[i]:
-                nums[i], nums[i + 1] = nums[i + 1], nums[i]
+        # for i in range(1, len(nums) - 1):
+        #     print((nums[i - 1] + nums[i + 1]) / 2)
+        #     if (nums[i - 1] + nums[i + 1]) / 2 == nums[i]:
+        #         nums[i], nums[i + 1] = nums[i + 1], nums[i]
+        # return nums
+        flag = True
+        while flag:
+            flag = False
+            length = len(nums) - 2
+            while length >= 0:
+                if (nums[length + 1] + nums[length - 1]) / 2 == nums[length]:
+                    nums[length - 1], nums[length] = nums[length], nums[length - 1]
+                    flag = True
+                length -= 1
+
         return nums
 
 
 def main():
     sol = Solution()
+    test=[4,3,6,7,9]
     nums = [1, 2, 3, 4, 5]
     nums2 = [6, 2, 0, 9, 7]
-    print(sol.rearrangeArray(nums2))
+    print(sol.rearrangeArray(test))
 
 
 main()
