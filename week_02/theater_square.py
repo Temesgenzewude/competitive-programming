@@ -30,7 +30,7 @@ def getNumberOfFlagStones(n, m, a):
         w = 1
     else:
         w = math.ceil(m / a)
-    print(h * w)
+    return w*h
 
 #
 # def main():
