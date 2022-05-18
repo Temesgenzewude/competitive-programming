@@ -36,7 +36,6 @@ def getNumberOfFlagStones(n, m, a):
 def main():
     test1 = getNumberOfFlagStones(3, 6, 4)
     test2 = getNumberOfFlagStones(6, 6, 4)
-    print(test1)
     print(test2)
 
 
