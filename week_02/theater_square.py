@@ -30,13 +30,14 @@ def getNumberOfFlagStones(n, m, a):
         w = 1
     else:
         w = math.ceil(m / a)
-    return h * w
+    print(h * w)
 
-
-def main():
-    test1 = getNumberOfFlagStones(3, 6, 4)
-    test2 = getNumberOfFlagStones(6, 6, 4)
-    print(test2)
-
-
-main()
+#
+# def main():
+#     test1 = getNumberOfFlagStones(3, 6, 4)
+#     test3=getNumberOfFlagStones(1,1,1)
+#     test2 = getNumberOfFlagStones(6, 6, 4)
+#     print(test3)
+#
+#
+# main()
