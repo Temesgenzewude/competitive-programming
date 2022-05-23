@@ -27,41 +27,43 @@ Constraints:
 1 <= tokens.length <= 104
 tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
 """
+
+
 class Solution(object):
     def evalRPN(self, tokens):
         """
         :type tokens: List[str]
         :rtype: int
         """
-        stack=[]
+        stack = []
         for token in tokens:
             if token not in '*+-/':
                 stack.append(int(token))
             else:
                 if stack:
-                    a=stack.pop()
-                    b=stack.pop()
-                    if token=='+':
-                        stack.append(a+b)
-                    elif token=='-':
-                        stack.append(b- a)
-                    elif token=='*':
-                        stack.append(b* a)
-                    elif token=='/':
-                        stack.append(b// a)
+                    a = stack.pop()
+                    b = stack.pop()
+                    if token == '+':
+                        stack.append(a + b)
+                    elif token == '-':
+                        stack.append(b - a)
+                    elif token == '*':
+                        stack.append(b * a)
+                    elif token == '/':
+                        stack.append(b // a)
         return stack.pop()
+
 
 def main():
     sol = Solution()
-    tokens1 = ["4", "13", "5", "/", "+"]
+    tokens1 = ["4", "13", "5", "/", "-"]
     tokens2 = ["2", "1", "+", "3", "*"]
     tokens3 = ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
-    tokens4= ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
-    print(sol.evalRPN(tokens1)) # prints 6
+    tokens4 = ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
+    print(sol.evalRPN(tokens1))  # prints 6
     print(sol.evalRPN(tokens2))
     print(sol.evalRPN(tokens3))
     print(sol.evalRPN(tokens4))
-
 
 
 main()
