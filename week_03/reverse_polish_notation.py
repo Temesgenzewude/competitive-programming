@@ -28,7 +28,7 @@ Constraints:
 tokens[i] is either an operator: "+", "-", "*", or "/", or an integer in the range [-200, 200].
 """
 
-
+import math
 class Solution(object):
     def evalRPN(self, tokens):
         """
@@ -50,19 +50,25 @@ class Solution(object):
                     elif token == '*':
                         stack.append(b * a)
                     elif token == '/':
-                        stack.append(b // a)
+                        stack.append(int(b/a))
+                        # if a>0 and b>0:
+                        #     stack.append(b // a)
+                        # else:
+                        #     res=b/a
+                        #     stack.append(math.trunc(res))
+
         return stack.pop()
 
 
 def main():
     sol = Solution()
-    tokens1 = ["4", "13", "5", "/", "-"]
+
     tokens2 = ["2", "1", "+", "3", "*"]
-    tokens3 = ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
-    tokens4 = ["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
+    tokens1 = ["4", "13", "5", "/", "+"]
+    tokens4=["10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"]
+
     print(sol.evalRPN(tokens1))  # prints 6
     print(sol.evalRPN(tokens2))
-    print(sol.evalRPN(tokens3))
     print(sol.evalRPN(tokens4))
 
 
