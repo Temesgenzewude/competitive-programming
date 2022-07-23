@@ -1,0 +1,1 @@
+This is the repository where I  solve coding problems.I love coding, competing, solving problems. Facing and not only accepting challenges but also tring to bring solutions and coming up with the desired solution always needs patiency and persistence
