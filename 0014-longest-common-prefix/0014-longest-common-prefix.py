@@ -15,7 +15,7 @@ class Solution:
         for k in range(minLeng):
             letter= strs[0][k]
             
-            for j in range(len(strs)):
+            for j in range(1, len(strs)):
                 if strs[j][k] != letter:
                     return lcp
             lcp+=letter
