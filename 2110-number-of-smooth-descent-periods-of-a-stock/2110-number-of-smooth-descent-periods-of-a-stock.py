@@ -8,6 +8,7 @@ class Solution:
                 dp.append(dp[-1] +1)
             else:
                 dp.append(1)
+      
         return sum(dp)
             
         
