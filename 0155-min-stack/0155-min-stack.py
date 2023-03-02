@@ -9,31 +9,41 @@ class MinStack(object):
         :type val: int
         :rtype: None
         """
+        
         self.stack.append(val)
-        if self.min == [] or self.min[-1] >= val:
+        
+        if not self.min or self.min[-1] >=val:
             self.min.append(val)
+     
 
 
     def pop(self):
         """
         :rtype: None
         """
-        if self.stack[-1] == self.min[-1]:
+        if self.stack and self.min and self.stack[-1]==self.min[-1]:
             self.min.pop()
-        self.stack.pop()
+        if self.stack:
+            self.stack.pop()
+            
+        
+        
+
         
 
     def top(self):
         """
         :rtype: int
+        
         """
-        return self.stack[-1]
+        if self.stack:return self.stack[-1]
 
     def getMin(self):
         """
         :rtype: int
         """
-        return self.min[-1]
+        
+        if self.min: return self.min[-1]
         
 
 
