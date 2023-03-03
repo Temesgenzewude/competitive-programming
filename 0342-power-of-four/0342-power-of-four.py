@@ -8,5 +8,5 @@ class Solution:
 
             
         
-        return self.isPowerOfFour(n/4)
+        return self.isPowerOfFour(n//4)
         
