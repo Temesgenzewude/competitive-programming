@@ -27,5 +27,14 @@ class Solution:
                     return lo
             mid = (lo + hi)//2
             mid_val= nums[mid]
+      
+                
+                
+                
+                
+                
+                
+        
+            
             
         
