@@ -9,15 +9,31 @@ class Solution:
         output=[]
         cur=root
         stack=[]
+        ans=[]
         
-        while cur or stack:
-            while cur:
-                stack.append(cur)
-                cur=cur.left
-            cur= stack.pop()
-            output.append(cur.val)
-            cur=cur.right
-        return output
+        def helper(node):
+            if not node:
+                return
+            
+            helper(node.left)
+            ans.append(node.val)
+            helper(node.right)
+        helper(root)
+        
+        return ans
+    
+        
+            
+        
+        
+        # while cur or stack:
+        #     while cur:
+        #         stack.append(cur)
+        #         cur=cur.left
+        #     cur= stack.pop()
+        #     output.append(cur.val)
+        #     cur=cur.right
+        # return output
         
         
 #         def inorder(root):
