@@ -19,12 +19,12 @@ class Solution:
         
        
         
-    def isMirror(self, lft_rt, rgt_rt):
-        if lft_rt and rgt_rt:
-            return lft_rt.val == rgt_rt.val and self.isMirror(lft_rt.left, rgt_rt.right) and self.isMirror(lft_rt.right, rgt_rt.left)
+    def isMirror(self, left_node, right_node):
+        if left_node and right_node:
+            return left_node.val == right_node.val and self.isMirror(left_node.left, right_node.right) and self.isMirror(left_node.right, right_node.left)
             
             
-        return lft_rt == rgt_rt
+        return left_node == right_node
             
        
             
