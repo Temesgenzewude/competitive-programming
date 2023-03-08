@@ -14,15 +14,15 @@ class Solution:
             if not node:
                 return True
             
-            left_val= isValid(node.left)
+            left_truth= isValid(node.left)
             if self.prevVal < node.val:
                 self.prevVal=node.val
             else:
                 return False
             
-            right_val= isValid(node.right)
+            right_truth= isValid(node.right)
             
-            return left_val and right_val
+            return left_truth and right_truth
             
             
         
