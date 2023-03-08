@@ -7,16 +7,16 @@
 class Solution:
     def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         
-        def isGreater(root):
+        def insert(root):
             if not root:
                 return TreeNode(val)
             if val<root.val:
-                root.left=isGreater(root.left)
+                root.left=insert(root.left)
             elif val>root.val:
-                root.right=isGreater(root.right)
+                root.right=insert(root.right)
             
             return root
-        return isGreater(root)
+        return insert(root)
             
             
             
