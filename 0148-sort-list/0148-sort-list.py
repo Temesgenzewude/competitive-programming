@@ -9,20 +9,7 @@ class Solution:
         if not head or not head.next:
             return head
         
-#         current= head
-#         while current:
-#             curr= current
-#             minNode=curr
-#             while curr:
-#                 if curr.val < minNode.val:
-#                     minNode=curr
-#                 curr=curr.next
-#             temp=current.val
-#             current.val=minNode.val
-#             minNode.val=temp
-#             current=current.next
-            
-#         return head
+
         left= head
         right= self.getMid(head)
         
