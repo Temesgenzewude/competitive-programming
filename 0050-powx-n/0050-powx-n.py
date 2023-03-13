@@ -17,12 +17,7 @@ class Solution:
             return half*half* helper(base, exp%2)
         
         
-        result=helper(x,n)
-        
-        if n <0:
-            return 1/result
-        
-        return result
+        return helper(x,n) if n>=0 else 1/helper(x,n)
             
             
             
