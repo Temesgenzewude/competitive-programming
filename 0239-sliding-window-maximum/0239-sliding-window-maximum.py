@@ -1,7 +1,7 @@
 class Solution:
     def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:
         
-        queue=[]
+        queue=deque()
         result=[]
         n=len(nums)
         
@@ -19,7 +19,7 @@ class Solution:
         
         for j in range(k,n):
             while queue and (j-k+1 >queue[0]):
-                queue.pop(0)
+                queue.popleft()
                 
         
             
