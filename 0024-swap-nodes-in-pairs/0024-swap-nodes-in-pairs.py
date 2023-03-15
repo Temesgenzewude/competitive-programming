@@ -5,12 +5,15 @@
 #         self.next = nxt
 class Solution:
     def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        
+    
         if not head or not head.next:
             return head
         else :
-            head.val,head.next.val=head.next.val,head.val
-            self.swapPairs(head.next.next)
+            temp = head.next
+            head.next= head.next.next
+            temp.next = head
+            head = temp
+            head.next.next =  self.swapPairs(head.next.next)
         return head
         
         
