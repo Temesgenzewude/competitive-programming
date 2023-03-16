@@ -1,5 +1,6 @@
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
+        candidates.sort()
         
         result=[]
         n=len(candidates)
@@ -11,7 +12,7 @@ class Solution:
                 result.append(combination.copy())
                 return 
             
-            if candidate >=n or sum(combination) > target: 
+            if candidate >=n or (target-sum(combination)) < candidates[candidate]: 
                 return
             
             
