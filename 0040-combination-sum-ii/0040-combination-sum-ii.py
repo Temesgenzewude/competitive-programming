@@ -7,7 +7,7 @@ class Solution:
         
         
         result=[]
-        visited=set()
+       
         
         def backtrack(candidate,comb_sum, combination):
             if comb_sum==target:
@@ -23,15 +23,13 @@ class Solution:
             combination.append(candidates[candidate])
             backtrack(candidate+1,comb_sum+candidates[candidate], combination)
             combination.pop()
-            # visited.add(candidates[candidate])
+           
             k=1
             while k+candidate<n and candidates[k+candidate]==candidates[candidate]:
                 k=k+1
             backtrack(candidate+k, comb_sum, combination)
             
-#             if candidates[candidate] in visited:
-            
-#                 visited.remove(candidates[candidate])
+
         
         backtrack(0,0,[])
         
