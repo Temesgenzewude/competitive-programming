@@ -7,7 +7,11 @@
 class Solution:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         
+        
+        
+        
         def helper(root):
+           
             max_width=1
             currLevel=[(root,1)]
             
@@ -24,6 +28,9 @@ class Solution:
                 currLevel=nextLevel
             
             return max_width
+       
         return helper(root)
+       
+
             
         
