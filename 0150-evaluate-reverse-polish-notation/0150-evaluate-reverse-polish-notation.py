@@ -33,6 +33,26 @@ class Solution:
         
         
         return stack.pop()
+    
+#      def calculate(a, b, opt):
+#             if opt=="+":
+#                 return b+a
+#             elif opt=="-":
+#                 return b-a
+#             elif opt=="*":
+#                 return b*a
+#             elif opt=="/":
+#                 return int(b/a)
+            
+        
+#         stack=[]
+        
+#         for token in tokens:
+            
+#             if token in "+-/*":
+#                 stack.append(calculate(stack.pop(), stack.pop(), token))
+#             else:
+#                 stack.append(int(token))
                 
                 
                 
