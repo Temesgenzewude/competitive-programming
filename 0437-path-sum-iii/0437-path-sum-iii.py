@@ -12,7 +12,7 @@ class Solution:
         prefix_count={0:1}
         self.currSum=0
         self.count=0
-        self.prevVal=0
+      
         
         
         def helper(root):
