@@ -2,7 +2,12 @@ class Solution:
    
         
     def quickSelect(self, left, right, nums, k):
-
+        
+        # select random number and swap with the first index
+        random_pivot_index = random.randint(left, right)
+        nums[random_pivot_index], nums[left] = nums[left], nums[random_pivot_index]
+        
+    
         pivot = nums[left]
         write = left + 1
 
