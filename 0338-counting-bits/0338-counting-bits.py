@@ -9,9 +9,9 @@ class Solution:
             curr=i
             
             while curr !=0:
-                if curr %2==1:
+                if (curr & 1)==1:
                     answer[i]+=1
-                curr=curr//2
+                curr>>=1
         return answer
             
                 
