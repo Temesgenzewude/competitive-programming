@@ -2,10 +2,22 @@ class Solution:
     def findComplement(self, num: int) -> int:
         
         mask=1
-        m_sign=0
+        
+        new=num
+        
+        count=0
         
         
-        for i in range(num.bit_length()):
+        
+        while new !=0:
+            count+=1
+            new>>=1
+       
+            
+    
+
+        
+        for i in range(count):
             num^=mask
             mask<<=1
         
