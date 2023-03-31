@@ -4,6 +4,7 @@ class Solution:
         
         xor_res=x^y
         hamming=0
+      
         
         while xor_res !=0:
             if (xor_res & 1)==1:
