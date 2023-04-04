@@ -1,7 +1,7 @@
 class Solution:
     def hasAlternatingBits(self, n: int) -> bool:
         
-        y= (n >> 0) & 1
+        y= n  & 1
         
         
         
@@ -11,7 +11,7 @@ class Solution:
                 return False
             
             n >>=1
-            y= (n >> 0) & 1
+            y= n & 1
         
         return True
             
