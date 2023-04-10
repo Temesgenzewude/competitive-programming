@@ -2,7 +2,7 @@ class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         
         count=0
-        visited=set() 
+       
         directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
         
         def isInboundAndValid(row, col):
