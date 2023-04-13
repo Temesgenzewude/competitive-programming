@@ -12,10 +12,10 @@ class Solution:
         
         def dfs(city):
             nonlocal visited
-            for n in graph[city]:
-                if n not in visited:
-                    visited.add(n)
-                    dfs(n)
+            for neighbour in graph[city]:
+                if neighbour not in visited:
+                    visited.add(neighbour)
+                    dfs(neighbour)
             
         for city in graph:
             if city not in visited:
