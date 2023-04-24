@@ -26,10 +26,4 @@ class Solution:
             peak=arr[j]
         
         return True
-    
-        
-                
-            
-        
-        
         
