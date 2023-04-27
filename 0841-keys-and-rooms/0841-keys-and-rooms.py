@@ -2,18 +2,18 @@ class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         
         
-        graph=defaultdict(list)
+#         graph=defaultdict(list)
         
-        for room in range(len(rooms)):
-            for key in rooms[room]:
-                graph[room].append(key)
+#         for room in range(len(rooms)):
+#             for key in rooms[room]:
+#                 graph[room].append(key)
         
-        print(graph)
+      
                 
         
-        def bfs(graph, node):
-            visited=set([node])
-            que=deque([node])
+        def bfs(graph):
+            visited=set([0])
+            que=deque([0])
             
             
             while que:
@@ -27,7 +27,7 @@ class Solution:
             return len(visited)==len(rooms)
             
                         
-        return bfs(graph, 0)
+        return bfs(rooms)
         
         
                         
