@@ -3,39 +3,15 @@ class Solution:
         
         n=len(mat)
         m=len(mat[0])
-        
-        found=dict()
-        
-       
-                    
-                    
-        
-        
-        
-                          
-                          
-                          
-                          
-                          
-                          
-                    
-        
-        
+     
         directions=[(-1,0),(1,0),(0,-1),(0,1)]
-        
-        
-        
         
         result=[[0 for _ in range(m)] for _ in range(n)]
         
         def isInbound(row, col):
             
             return 0 <= row < n and 0 <= col < m
-            
-            
-        
-       
-            
+     
         visited=set()
             
         que=deque()
