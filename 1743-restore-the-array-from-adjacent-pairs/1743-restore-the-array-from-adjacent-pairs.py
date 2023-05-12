@@ -13,8 +13,8 @@ class Solution:
         for key in graph:
             if len(graph[key])==1:
                 extremes.append(key)
-                if len(extremes)==2:
-                    break
+                break
+                
                     
         
         queue=deque([extremes[0]])
