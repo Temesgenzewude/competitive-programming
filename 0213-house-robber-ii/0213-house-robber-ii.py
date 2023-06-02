@@ -13,7 +13,7 @@ class Solution:
                 return max(nums[start], nums[start+1])
             
             if (i, start) not in memo:
-                memo[(i, start)]=max((nums[i]+max(dp(i-2, start), dp(i-3, start)), dp(i-1, start)))
+                memo[(i, start)]=max((nums[i]+dp(i-2, start), dp(i-1, start)))
             return memo[(i, start)]
         
         if len(nums) < 4:
