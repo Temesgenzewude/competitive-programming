@@ -13,11 +13,7 @@ class Solution:
             
             left, right= dfs(root.left), dfs(root.right)
             
-           
-            
-            
             return 1+min(left, right)
-        
         
         if not root:
             return 0
@@ -27,10 +23,7 @@ class Solution:
         self.dfs(root, 0)
 
         return self.min_depth
-        
-        
-        
-    
+       
     def dfs(self, root, curr_depth):
         
         if not root:
